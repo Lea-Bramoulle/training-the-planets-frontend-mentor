@@ -1,0 +1,72 @@
+.planet-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem auto;
+    min-height:65vh;
+
+    &-image {
+        width: 60%;
+        height:65vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+
+        &-second {
+            position:absolute;
+            width:20%;
+            bottom : 0;
+            right:40%;
+        }
+    }
+
+    &-content {
+        width: 40%;
+
+        &--title {
+            font-size: 3rem;
+            font-weight: bolder;
+            font-family: 'Antonio', sans-serif;
+        }
+
+        &--desc {
+            margin : 2rem 0;
+            font-weight: lighter;
+        }
+
+        &--categories {
+            margin: 2rem 0;
+        }
+
+        &--link {
+            text-decoration:underline;
+            font-weight: bolder;
+        }
+
+        &--button {
+            margin : 1rem 0;
+            padding: 1rem 2rem;
+            border: 1px solid grey;
+            cursor: pointer;
+
+            &-id {
+                opacity: 0.6;
+                padding-right: 1.5rem;
+            }
+
+            &-title {
+                font-weight: bolder;
+                text-transform: uppercase;
+                font-size: 1rem;
+            }
+
+
+        }
+
+        &--button:hover {
+            background-color: grey;
+            transition-duration: 1s;
+        }
+    }
+}

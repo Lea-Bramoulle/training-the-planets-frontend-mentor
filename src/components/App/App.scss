@@ -1,0 +1,19 @@
+.App {
+  background-color: #070724;
+  height:100vh;
+  color:white;
+  font-family: 'League Spartan', sans-serif;
+}
+
+.container {
+  width:80%;
+  margin:auto;
+}
+
+.main-container {
+  background-image: url("./../../assets/images/background-stars.svg");
+  min-height:600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

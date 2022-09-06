@@ -1,0 +1,28 @@
+header {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Antonio', sans-serif;
+
+    &--logo {
+        font-size: 2rem;
+        font-weight: bolder;
+    }
+
+    &--links {
+        display: flex;
+        justify-content: flex-end;
+        margin:  0;
+    }
+
+    &--link {
+        padding: 2rem 0;
+        text-transform: uppercase;
+        margin : 0 1rem;
+        cursor: pointer;
+    }
+}
