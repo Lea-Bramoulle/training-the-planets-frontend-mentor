@@ -5,7 +5,6 @@ import React from "react";
 
 import Navbar from "../Navbar/Navbar";
 import NavbarMobile from "../NavbarModile/NavbarMobile";
-import PlanetNavigationMobile from "../PlanetNavigationMobile/PlanetNavigationMobile";
 import PlanetMain from "../PlanetMain/PlanetMain";
 import PlanetStat from "../PlanetStat/PlanetStat";
 
@@ -69,13 +68,6 @@ class App extends React.Component {
             toggleMenu={this.toggleMenuIsOppen}
           />
         )}
-        {/* <PlanetNavigationMobile
-          planetData={this.handleTargetPlanetData()}
-          sectionInformation={this.state.targetInformationSection}
-          handleSectioninformationChange={
-            this.handleTargetInformationSectionChange
-          }
-        /> */}
         <main className="main-container">
           <PlanetMain
             planetData={this.handleTargetPlanetData()}
