@@ -26,3 +26,22 @@ header {
         cursor: pointer;
     }
 }
+
+.menu-icon {
+    display: none;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .navbar {
+        padding: 2rem;
+
+        &--links {
+        display: none;
+        }
+    }
+
+    .menu-icon {
+        display:block;
+    }
+  }

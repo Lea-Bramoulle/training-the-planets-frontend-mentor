@@ -1,6 +1,11 @@
 import "./navbar.scss";
 
-function Navbar({ planetsData, onChangePlanetState, targetPlanet }) {
+function Navbar({
+  planetsData,
+  onChangePlanetState,
+  targetPlanet,
+  toggleMenu,
+}) {
   return (
     <header>
       <div className="navbar container">
@@ -24,6 +29,14 @@ function Navbar({ planetsData, onChangePlanetState, targetPlanet }) {
             </li>
           ))}
         </ul>
+        <img
+          src={require(`./../../assets/images/icon-hamburger.png`)}
+          alt="menu icon"
+          className="menu-icon"
+          onClick={() => {
+            toggleMenu();
+          }}
+        />
       </div>
     </header>
   );

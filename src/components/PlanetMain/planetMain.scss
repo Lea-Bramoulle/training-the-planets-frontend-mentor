@@ -2,6 +2,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
     margin: 1rem auto;
     min-height:65vh;
 
@@ -70,3 +71,53 @@
         }
     }
 }
+
+
+
+@media only screen and (max-width: 600px) {
+    .planet-main  {
+        position:relative;
+
+        &-image {
+            width:auto;
+            margin:auto;
+            height:40vh;
+            margin-top: 4rem;
+
+            & img {
+                max-height:40vh;
+            }
+        }
+
+        &-content {
+            width:100%;
+            padding:  2rem;
+            text-align: center;
+
+            &--categories {
+                width:100vw;
+                position:absolute;
+                top:-4rem;
+                left:0;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: stretch;
+            }
+
+            &--button {
+                padding: 0.5rem 1rem;
+                font-size: 0.8rem;
+                font-weight: lighter;
+                border:none;
+                width:33%;
+
+                &-id {
+                    display: none;
+                }
+            }
+        }
+
+        
+    }
+  }

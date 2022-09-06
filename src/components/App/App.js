@@ -4,6 +4,8 @@ import "./../../style/_reset.css";
 import React from "react";
 
 import Navbar from "../Navbar/Navbar";
+import NavbarMobile from "../NavbarModile/NavbarMobile";
+import PlanetNavigationMobile from "../PlanetNavigationMobile/PlanetNavigationMobile";
 import PlanetMain from "../PlanetMain/PlanetMain";
 import PlanetStat from "../PlanetStat/PlanetStat";
 
@@ -16,12 +18,14 @@ class App extends React.Component {
     this.state = {
       targetPlanet: "Mercury",
       targetInformationSection: "overview",
+      menuIsOpen: false,
     };
 
     this.handleTargetPlanetChange = this.handleTargetPlanetChange.bind(this);
     this.handleTargetPlanetData = this.handleTargetPlanetData.bind(this);
     this.handleTargetInformationSectionChange =
       this.handleTargetInformationSectionChange.bind(this);
+    this.toggleMenuIsOppen = this.toggleMenuIsOppen.bind(this);
   }
 
   handleTargetPlanetChange(planetName) {
@@ -38,9 +42,14 @@ class App extends React.Component {
   }
 
   handleTargetInformationSectionChange(section) {
-    console.log(section);
     this.setState({
       targetInformationSection: section,
+    });
+  }
+
+  toggleMenuIsOppen() {
+    this.setState({
+      menuIsOpen: !this.state.menuIsOpen,
     });
   }
 
@@ -51,7 +60,22 @@ class App extends React.Component {
           targetPlanet={this.state.targetPlanet}
           planetsData={data}
           onChangePlanetState={this.handleTargetPlanetChange}
+          toggleMenu={this.toggleMenuIsOppen}
         />
+        {this.state.menuIsOpen && (
+          <NavbarMobile
+            planetsData={data}
+            onChangePlanetState={this.handleTargetPlanetChange}
+            toggleMenu={this.toggleMenuIsOppen}
+          />
+        )}
+        {/* <PlanetNavigationMobile
+          planetData={this.handleTargetPlanetData()}
+          sectionInformation={this.state.targetInformationSection}
+          handleSectioninformationChange={
+            this.handleTargetInformationSectionChange
+          }
+        /> */}
         <main className="main-container">
           <PlanetMain
             planetData={this.handleTargetPlanetData()}
