@@ -1,8 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import "./planetMain.scss";
 
-import data from "./../../data/data.json";
-
 function PlanetMain({
   planetData,
   sectionInformation,
@@ -50,6 +48,7 @@ function PlanetMain({
                 : planetData.geology.source
             }
             target="_blank"
+            rel="noreferrer"
             className="planet-main-content--link"
           >
             Wikipédia

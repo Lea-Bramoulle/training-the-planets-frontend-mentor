@@ -1,7 +1,5 @@
 import "./planetStat.scss";
 
-import data from "./../../data/data.json";
-
 function PlanetStat({ planetData }) {
   return (
     <section className="container planet-stat">
